@@ -1,0 +1,239 @@
+@charset "utf-8";
+*,
+*::before,
+*::after {box-sizing: inherit;}
+html, body, div,
+h1, h2, h3, h4, h5, h6, p, a, i,
+dl, dt, dd, ol, ul, li {padding:0; margin:0;}
+html, body {-webkit-text-size-adjust:none;}
+body {position:relative; font-size: .875rem; letter-spacing: -1px; width: 100vw; height: 100vh; overflow: hidden;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+ul, ol {list-style:none;}
+table {border-collapse:collapse;border-spacing:0;}
+img {display: block; /* border:0;outline:none */}
+label {cursor:pointer; vertical-align: middle;}
+input[type="checkbox"] + label {vertical-align: top;}
+i, em, address {font-style:normal}
+caption,legend{visibility:hidden;width:0px;height:0px;font-size:0px;line-height:0px}
+p, div, span, ul, ol, li, dl, dt, dd{ word-break:keep-all; }
+/* html5 ie9 else */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+	padding:0;
+	margin:0
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']{cursor:pointer; -webkit-appearance:button;}
+button,input,select,textarea {vertical-align: middle; border: 1px solid #cfd8dc; font-size: .6875rem; padding: .375rem; box-sizing: border-box;}
+input[type='checkbox'], input[type='radio'] {margin: 0 .25rem;}
+textarea{resize:none;}
+a {color: #000; text-decoration:none; cursor:pointer; }
+
+span.hidden {overflow: hidden; width: 1px; height: 1px; clip: rect(1px,1px,1px,1px); clip-path: inset(50%); position: absolute;}
+
+/* clearfix */
+.clearfix{ *zoom:1;}
+.clearfix:before, .clearfix:after {display:table; content:''; line-height:0;}
+.clearfix:after {clear:both;}
+
+/*text align set*/
+.text-center{text-align:center !important;}
+.text-left{text-align:left !important;}
+.text-right{text-align:right !important;}
+
+/*float set*/
+.fl-left{float:left !important;}
+.fl-right{float:right !important;}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	select {padding: 0;}
+}
+
+/* gis */
+body {background: #f4f5f7 url("../images/gis/f-logo.png") no-repeat bottom 1rem right 1.5rem; width: 100vw; height: 100vh; overflow: hidden;}
+.map_Div {text-align: center; width: 30.375rem; height: 100vh; margin: 0 auto; position: relative;}
+section {position: absolute; top: 1rem; width: 42.5rem;}
+section.left {left: 1rem;}
+section.right {right: 1rem;}
+
+/* map */
+h1 {font-size: 2.25rem; padding: .5rem 0;}
+h1 em {font-weight: bold; font-size: 2.5rem;}
+.datepicker {font-size: .6875rem;}
+.datepicker input {width: 6.5rem;}
+.datepicker label {margin-left: -1.6rem;}
+.datepicker label:before {content: url("../images/gis/ic-calendar.png"); display: inline-block; margin-top: .25rem;}
+.datepicker ul {display: inline-block; text-align: left; vertical-align: middle; margin-left: .5rem;}
+.datepicker ul em {font-weight: bold; letter-spacing: 0;}
+
+
+/* button */
+.btn {display: inline-block; font-size: .9375rem; border-radius: 1rem; text-align: center; letter-spacing: 0; vertical-align: middle; padding: .3125rem 1rem; box-sizing: border-box; border: 1px solid #bdbdbd; background:#fff;}
+.btn:hover{transition: background-color .3s; background:#616161; color: #fff;}
+.btn-small {font-size: .8125rem; padding: .1rem 1rem;}
+
+/* legend */
+.control {position: absolute; bottom: 1.5rem; right: .5rem;}
+.control > * {display: inline-block; vertical-align: bottom; margin-left: .5rem;}
+table .condition span:first-child:after,
+.control .btn:after {content: ''; display: inline-block; border: 5px solid; border-color: transparent transparent #424242 transparent; margin: 0 0 1px 5px;}
+.control .btn:hover:after {border-color: transparent transparent #fff transparent;}
+.legend {font-size: .6875rem; padding: .5rem; border-radius: 5px; background: #fff; box-shadow: 1.414px 1.414px 8px 0px rgba(0, 0, 0, 0.2);}
+.legend li {white-space: nowrap;}
+.legend li:before {content: ''; vertical-align:middle; display:inline-block; width: 1.625rem; height: .625rem; border: 1px solid #e0e0e0; margin-right: .5rem;}
+.concern .condition,
+.concern:before {background: #023693;}
+.caution .condition,
+.caution:before {background: #ffff00;}
+.alert .condition,
+.alert:before {background: #ff9900;}
+.serious .condition,
+.serious:before {background: #ff0000;}
+.concern th {background: #d6dfee;}
+.caution th {background: #ffffd6;}
+.alert th {background: #ffefd6;}
+.serious th {background: #ffd6d6;}
+
+.stripeArea .condition,
+.stripeArea:before {background: url("../images/stripe.PNG") -2px -2px;}
+/* table */
+table {border: 1px solid #e0e0e0; width: 100%; height: 100%; background: #fff;}
+table th, table td {padding: .5rem; border-right: 1px solid #e0e0e0; border-top:1px solid #e0e0e0; vertical-align: top;}
+table th {font-size: 1rem; text-align: center;}
+table td:last-child {text-align: right; letter-spacing: 0; width: 20%;}
+table span {font-size: .75rem; color: #777;}
+table .condition {text-align: center; padding: .5rem .25rem; width: 25%;}
+table .condition span {color: inherit;}
+table:not(.normal) .condition span {color: #fff;}
+table.caution .condition span {color: inherit;}
+table .condition span:first-child:after {border-color: transparent transparent transparent #fff; margin: 0 0 -1px 6px;}
+table.caution .condition span:first-child:after {border-color: transparent transparent transparent #000;}
+table.normal .condition span:first-child:after {content: none;}
+dl {text-align: right;}
+table.popup th,
+dt {font-size: .75rem;}
+dd {font-size: 1.125rem; font-weight: bold;}
+
+table.small th, table.small td {padding: .25rem;}
+table.small th {font-size: .875rem;}
+table.small td {font-size: .6875rem;}
+table.popup th,
+table.small td:nth-child(1) {background: #f7f7f7;}
+table.small td:nth-child(2) {background: #fff5ec;}
+table.small span {font-size: .6875rem;}
+table.small em {font-weight: bold; font-size: .75rem; vertical-align: text-top;}
+
+table.popup th, table.popup  td {text-align: left; line-height: normal;}
+
+.list {position: absolute; width: inherit; left: 0; bottom: 1rem; display: none;}
+.list table td:last-child {width: auto;}
+.list table.small th, .list table.small td {border-right: 0; background: #fff; padding: .3125rem .5rem;}
+.list table.small th {background: #f8fdfe; font-size: .6875rem;}
+.list table.small td:first-child {white-space: nowrap;}
+.list table.small td:last-child {border-right: 1px solid #e0e0e0;}
+.list table dl {text-align: left;}
+.list table dt,
+.list table dd {font-size: inherit; font-weight: normal; display: inline-block; vertical-align: top;}
+.list table dt {width: 17%;}
+.list table dd {width: 80%;}
+.btn-close {position: absolute; font-size: .625rem; background: #fff; border: 1px solid #e0e0e0; top: 0; right: 0; line-height: 1.125rem; width: 2rem; padding-left: .5rem;}
+.btn-close:before, .btn-close:after {content: ''; width: 1px; height: .625rem; background: #464646; position: absolute; left: .5rem; top: .3125rem;}
+.btn-close:before {transform: rotate(45deg);}
+.btn-close:after {transform: rotate(-45deg);}
+
+.drop-area-dam .drop{display: inline-block; border: 2px dashed #e0e0e0; background: url("../images/gis/ic-dam.png") no-repeat 50% 50%; width: 20.25rem; height: 13.5rem; margin: .25rem; position: relative;}
+.drop-area-reservoir .drop{display: inline-block; border: 2px dashed #e0e0e0; background: url("../images/gis/ic-reservoir.png") no-repeat 50% 50%; width: 20.25rem; height: 13.5rem; margin: .25rem; position: relative;}
+.drag {position: relative;}
+.drag:not(:first-child) {margin-top: .5rem;}
+.drop-area-dam .drag {width: calc(100% + 4px); height: calc(100% + 4px); margin: -2px 0 0 -2px;}
+.drop-area-reservoir .drag {width: calc(100% + 4px); height: calc(100% + 4px); margin: -2px 0 0 -2px;}
+.overlay {width: 100%; height: 100%; background: rgba(255,255,255,.8); border: 2px dashed #54d9d0; position: absolute; left: -2px; top: -2px; opacity: 0; transition: .5s ease; z-index: 10;}
+.btn-drag {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 3rem;}
+.dams .btn-drag:before {content: url("../images/gis/btn-drag.png"); display: block;}
+.btn-delete {position: absolute; right: 1rem; bottom: .7rem;}
+.btn-delete:before {content: url("../images/gis/ic-delete.png"); display: block;}
+.drag:hover .overlay {opacity: 1; cursor: move;}
+
+.dams > div {float: left; overflow-y: scroll; height: calc(100vh - 30rem);}
+article {/* width: 21.25rem; */ width: auto;}
+h2 {font-size: 1rem; margin: .5rem 0 .25rem; line-height: 1rem;}
+.damArea h2:before {content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: url("../images/gis/ic-dam-white.png") no-repeat top 50% right -2px; margin: 0 .5rem; vertical-align: middle;}
+.reservoirArea h2:before {content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: url("../images/gis/ic-reservoir-white.png") no-repeat top 50% right -2px; margin: 0 .5rem; vertical-align: middle;}
+article > div {padding: .5rem;}
+.han h2:before {background-color: #93c3f1;}
+.han > div {background-color: #e7eff6;}
+.nakdong h2:before {background-color: #80deea;}
+.nakdong > div {background-color: #e0f7fa;}
+.seomjin h2:before {background-color: #80cbc4;}
+.seomjin > div {background-color: #e0f2f1;}
+.geum h2:before {background-color: #b39ddb;}
+.geum > div {background-color: #ede7f6;}
+.yongsu h2:before {background-color: #aed581;}
+.yongsu > div {background-color: #f1f8e9;}
+
+/* calendar */
+#ui-datepicker-div {display:none; font-family:'Roboto','Noto Sans KR'; width:338px; overflow:hidden; border:1px solid #bdbdbd; background:#fff; box-shadow: 3px 3px 3px 0px rgba(214, 214, 214, 0.75);}
+#ui-datepicker-div.datepicker-year-wrap {width:250px;}
+.ui-datepicker-header {position:relative; height:27px; padding:11px 0 10px 0; background:#26a69a; color:#fff; text-align:center; z-index:10;}
+.ui-datepicker-header .ui-datepicker-prev {position:absolute; left:19px; top:14px; width:20px; height:20px; border:1px solid #fff; text-indent:-999999px;}
+.ui-datepicker-header .ui-datepicker-prev .ui-icon-circle-triangle-w {display:block; position:absolute; left:8px; top:7px; width:0; height:0; border-top:3px solid transparent; border-bottom:3px solid transparent; border-right:4px solid #fff;}
+.ui-datepicker-header .ui-datepicker-next {position:absolute; right:19px; top:14px; width:20px; height:20px; border:1px solid #fff; text-indent:-999999px;}
+.ui-datepicker-header .ui-datepicker-next .ui-icon-circle-triangle-e {display:block; position:absolute; right:8px; top:7px; width:0; height:0; border-top:3px solid transparent; border-bottom:3px solid transparent; border-left:4px solid #fff;}
+.ui-datepicker-header .ui-datepicker-title > select {line-height:26px; height:26px; border-color:#fafafa; border-radius:2px; background-color:#26a69a; color:#fff; font-size:14px;}
+.ui-datepicker-header .ui-datepicker-title .ui-datepicker-year {width:89px; margin-right:20px; padding: 0 .375rem;}
+.ui-datepicker-header .ui-datepicker-title .ui-datepicker-month {width:69px; padding: 0 .375rem;}
+.ui-datepicker-calendar {display:block; width:300px; overflow:hidden; border-top:2px solid #26a69a; margin:20px 19px; border-bottom:1px solid #cecece; background:#fff; z-index:10;}
+.ui-datepicker-calendar > thead > tr > th, .ui-datepicker-calendar > tbody > tr > td {padding: .2rem .41rem;}
+.ui-datepicker-calendar > thead > tr > th {background:#f4f4f4; color:#000; text-align:center; font-weight:400;}
+.ui-datepicker-calendar > tbody > tr > td {text-align:center; font-weight:400;}
+.ui-datepicker-calendar > tbody > tr:first-child > td {border-top:1px solid #cecece;}
+.ui-datepicker-calendar > tbody > tr > td:first-child a {color:#f44336;}
+.ui-datepicker-calendar .ui-datepicker-other-month {color:#bebebe;}
+.ui-datepicker-calendar .ui-datepicker-week-end.ui-datepicker-other-month {color:#bebebe;}
+.ui-datepicker-calendar > thead > tr > th.ui-datepicker-week-end {color:#000;}
+.ui-datepicker-calendar a {display:block; width:28px; height:28px; margin:0 auto; border-radius:50%; text-align:center; line-height:27px;}
+.ui-datepicker-calendar a.ui-state-hover {background:#ddd;}
+.ui-datepicker-calendar tr:hover {background: transparent; box-shadow: none;}
+.ui-datepicker-calendar .ui-datepicker-today a {background:#ffc107 !important; color:#fff;}
+.ui-datepicker-trigger {display: inline-block; vertical-align: middle; margin-left: -1.5rem; cursor: pointer;}
+
+/*board*/
+.list-type1{clear:both; border-top:2px solid #555; border-bottom:1px solid #555; box-sizing:border-box; overflow:hidden;}
+.list-type1 table {width:100%;  table-layout: fixed;}
+.list-type1 table th {font-size:1.4rem; font-weight:400; text-align:center; vertical-align:middle; background-color:#f5f5f5; color:#212121;}
+.list-type1 table tbody td {text-align:center;vertical-align:middle; color:#424242; white-space:nowrap; overflow: hidden;}
+.list-type1 table tbody td a {text-decoration:none; cursor:pointer;}
+.list-type1 table tbody td a:hover {text-decoration:underline}
+.list-type1 table tbody td a.btn-addfile{display:inline-block; font-size:0; line-height:0;}
+.list-type1 table th,
+.list-type1 table tbody td {border-left:1px solid #e4e4e5; border-bottom:1px solid #e4e4e5}
+.list-type1 table tbody tr:hover{background:#faf8e5;}
+.list-type1 table thead tr:first-child th:first-child,
+.list-type1 table tbody th:first-child,
+.list-type1 table tbody td:first-child,
+.list-type1 table tfoot th:first-child,
+.list-type1 table thead th.firs0t-child {border-left:none}
+.list-type1 table tbody tr:last-child td {border-bottom: none;}
+.list-type1 table thead th {padding:1rem;}
+.list-type1 table tfoot th {padding:1rem; font-weight:400;}
+.list-type1 table tbody th,
+.list-type1 table tbody td {padding:1rem; text-overflow:ellipsis; white-space:nowrap; }
+.list-type1 table tbody td.no-ellipsis {white-space: normal; text-overflow: clip;}
+.list-type1 table tbody td img{vertical-align:middle}
+.list-type1 table tbody td ul li{width:100%; text-align:left; white-space: normal; }
+.list-type1 table tbody td label{padding-left:4px; line-height: 32px; }
+.list-type1 table .type1_empty {padding:60px}
+.list-type1 table .chart{height:160px;}
+.list-type1 table .chart2{height:120px;}
+
+/*board popup table*/
+.list-type-pop table {table-layout: auto;}
+.list-type-pop table tbody th {font-size: 1.2rem;}
+.list-type-pop table tbody th,
+.list-type-pop table tbody td {padding: 0.5rem;}
+
+	.list-type1{overflow:auto;}
+  	.list-type1 table tbody td{padding:0.4rem;}
+  	.list-type1 table tbody td {font-size:1.2rem;}

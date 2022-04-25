@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+
+.layer-popup {display:block; position:absolute; z-index:500; border:2px solid #bdbdbd; background:#fff; overflow:hidden; box-sizing:border-box; box-shadow: 0px 3px 5px 0px rgba(34, 33, 33, 0.3);}
+.layer-popup .popup-header {letter-spacing: -0.025rem; padding:15px 15px 15px 66px; color:#000; font-size: 18px; position: relative; box-shadow: 0px 0px 6px 0px rgba(29, 32, 37, 0.15); background:url("../images/popup-tit-bg.png") no-repeat 20px -8px;}
+.layer-popup .popup-header .btn-close {position:absolute; right:13px; top:13px; display:block; width:20px; height:20px; background:url("../images/ic-close.png") no-repeat 0 0; text-indent:-999999px; overflow: hidden;}
+.layer-popup .popup-content h2 {font-size:16px; line-height:32px; display: inline-block;}
+.layer-popup .popup-content {padding:20px;}
+.layer-popup .popup-content table {table-layout: auto;}
+
+.layer-popup .popup-content p{line-height:2rem; border-radius:10px; margin-top:1rem; background:#fefbf1; padding:1.4rem;}
+.layer-popup .popup-content p em{color:#ff6f00;}
+.layer-popup .popup-content p b{color:#dd2c00; }
+
+
+/*월별 예경보 통합지도*/
+.year_union_0{background: #ffffff;}
+.year_union_1{background: #023693;}
+.year_union_2{background: #ffdf00;}
+.year_union_3{background: #e38000;}
+.year_union_4{background: #e30000;}
